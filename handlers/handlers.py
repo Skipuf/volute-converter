@@ -29,7 +29,6 @@ async def values(message: Message) -> None:
 async def start(message: Message) -> None:
     try:
         ms = message.text.split(" ")
-        print(ms)
         if len(ms) != 3:
             raise Syntax_Exception
         if not (Values.check_str(ms[0]) and Values.check_str(ms[1]) and is_float(ms[2])):
